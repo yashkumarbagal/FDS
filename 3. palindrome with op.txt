@@ -59,7 +59,7 @@ print("substring index :", index)
 
 
 
-Output:
+'''Output:
 
 Enter the string To display word with the longest length: 
 Thor the God of Thunder
@@ -83,3 +83,4 @@ Iron man
 Enter substring:- 
 man
 substring index : 5
+'''

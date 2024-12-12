@@ -1,0 +1,100 @@
+#include <iostream>
+#include<stdlib.h>
+int f=0,r=-1;
+using namespace std;
+
+
+class queue
+{
+
+	public:
+		int pr;
+
+		int data;
+
+		int arr[100];
+		void push(int x);
+ int pop();
+void printQ();
+
+
+};
+
+
+void queue:: push(int x)
+ {
+	cout<<"\n enter job id";
+	cin>>x;
+  if(r>=5)
+   cout<<"\n Job Queue is full";
+  else
+  {
+  	r++;
+  	arr[r]=x;
+
+   }
+
+ }
+
+
+ void queue::printQ()
+ {
+
+  for(int i=f;i<=r;i++)
+   {
+   	cout<<"\n"<<arr[i];
+
+   }
+
+ }
+
+
+ int  queue:: pop()
+ {
+  int p;
+  if(f>r)
+   cout<<"Queue is empty";
+  else
+    {
+    p=arr[f];
+	f=f+1;
+	return(p);
+		 }
+}
+
+
+
+ int  main()
+{
+	char t1,pp,el[10];
+	int ch,n;
+     int p[10],i,j,x;
+
+
+   queue intq;
+
+  do
+  {
+	  cout<<"\n 1.insert\n2.delete\n3.print";
+	  cout<<"\n enter your choice:";
+	  cin>>ch;
+	  switch(ch)
+	  {
+	  case 1:
+		  intq.push(x);
+		  break;
+	  case 2:
+		  intq.pop();
+		  break;
+	  case 3:
+		  intq.printQ();
+		  break;
+	  case 4:
+		  exit(0);
+	  default:
+		  cout<<"\n invalid choice";
+	  }
+  }
+  while(ch!=4);
+  return 0;
+}
